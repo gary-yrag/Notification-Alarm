@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/activity_agendashow"
+    tools:context="com.alamkanak.weekview.sample.Agendashow"
+    android:background="@color/primary_text_default_material_dark"
+    style="@style/AlertDialog.AppCompat.Light">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="1">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/obtitulo"
+                    android:hint="Título"
+                    android:capitalize="sentences" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="85dp"
+                    android:inputType="textMultiLine"
+                    android:ems="10"
+                    android:id="@+id/obcontenido"
+                    android:hint="Descripción"
+                    android:capitalize="sentences" />
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:stretchColumns="*"
+                    android:shrinkColumns="*">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <CheckBox
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Todo el día"
+                            android:id="@+id/diaall"
+                            android:layout_span="2"
+                            android:clickable="true" />
+
+                        <CheckBox
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Notificarme"
+                            android:id="@+id/notill"
+                            android:layout_span="2"
+                            android:checked="true"
+                            android:clickable="true" />
+                    </TableRow>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Inicia"
+                        android:id="@+id/textView4"
+                        android:textStyle="bold"
+                        android:textColor="#b5b1b1" />
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/fedesde"
+                            android:singleLine="false"
+                            android:hint="DD/MM/YYYY"
+                            android:clickable="true"
+                            android:layout_span="2"
+                            android:linksClickable="true" />
+                        <EditText
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/tidesde"
+                            android:hint="HH:MM"
+                            android:clickable="true"
+                            android:layout_span="2"
+                            android:linksClickable="true" />
+                    </TableRow>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Finaliza"
+                        android:id="@+id/textView5"
+                        android:textStyle="bold"
+                        android:textColor="#b5b1b1" />
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/fehasta"
+                            android:hint="DD-MM-YYYY"
+                            android:clickable="true"
+                            android:layout_span="2"
+                            android:linksClickable="true" />
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/tihasta"
+                            android:hint="HH:MM"
+                            android:clickable="true"
+                            android:layout_span="2"
+                            android:linksClickable="true" />
+                    </TableRow>
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="13dp">
+
+                        <ImageButton
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/obokk"
+                            android:src="@drawable/ico_check"
+                            android:layout_span="1"
+                            android:clickable="true"
+                            android:contextClickable="true" />
+                        <ImageButton
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/obdel"
+                            android:src="@drawable/ico_delete"
+                            android:layout_span="2"
+                            android:clickable="true"
+                            android:contextClickable="true" />
+                        <ImageButton
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/obcan"
+                            android:src="@drawable/ico_back"
+                            android:layout_span="1"
+                            android:clickable="true"
+                            android:contextClickable="true" />
+                    </TableRow>
+                </TableLayout>
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+</RelativeLayout>

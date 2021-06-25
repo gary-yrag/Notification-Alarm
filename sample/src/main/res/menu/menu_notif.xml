@@ -1,0 +1,19 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MyActivity">
+    <!--item android:id="@+id/ag"
+        android:title="@string/ag"
+        android:orderInCategory="100"
+        app:showAsAction="ifRoom"/-->
+    <group>
+        <item android:id="@+id/ag"
+            android:title="@string/ag"
+            android:orderInCategory="100"
+            app:showAsAction="ifRoom"/>
+        <item android:id="@+id/renew"
+            android:title="@string/renew"
+            android:orderInCategory="100"
+            app:showAsAction="ifRoom"/>
+    </group>
+</menu>

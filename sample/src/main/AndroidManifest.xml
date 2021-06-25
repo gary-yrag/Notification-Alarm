@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.alamkanak.weekview.sample" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- permission required to use Alarm Manager -->
+    <uses-permission android:name="com.android.alarm.permission.SET_ALARM" />
+    <!-- permission required to Send SMS -->
+    <!--uses-permission android:name="android.permission.SEND_SMS" /-->
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <!--uses-permission android:name="android.permission.READ_PROFILE" /-->
+    <!--uses-permission android:name="android.permission.READ_CONTACTS" /-->
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ingana"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.AppCompat.Light">
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTop" >
+        </activity>
+        <receiver android:name=".ReceiverBoot" android:enabled="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" >
+                    <category android:name="android.intent.category.DEFAULT" >
+                    </category>
+                </action>
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".ReceiverBootNube" android:enabled="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" >
+                    <category android:name="android.intent.category.DEFAULT" >
+                    </category>
+                </action>
+            </intent-filter>
+        </receiver>
+        <activity
+            android:name=".BasicActivity"
+            android:label="@string/title_activity_basic" >
+        </activity>
+        <activity
+            android:name=".AsynchronousActivity"
+            android:label="@string/title_activity_asynchronous" >
+        </activity>
+        <activity
+            android:name=".MainLogueo"
+            android:clearTaskOnLaunch="true"
+            android:icon="@drawable/ingana"
+            android:label="@string/title_activity_main_logueo"
+            android:launchMode="singleTask"
+            android:logo="@drawable/ingana"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
+        <activity
+            android:name=".Notificacion_show"
+            android:clearTaskOnLaunch="true"
+            android:icon="@drawable/ingana"
+            android:label="@string/title_activity_notificacion_show"
+            android:launchMode="singleTask"
+            android:logo="@drawable/ingana"
+            android:noHistory="true"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
+        <activity
+            android:name=".Index"
+            android:icon="@drawable/ingana"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:launchMode="singleTop">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Agendashow"
+            android:label="@string/title_activity_agendashow"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
+    </application>
+</manifest>

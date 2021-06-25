@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name"> Kilkai </string>
+    <string name="action_today">Hoy</string>
+    <string name="action_day_view">Vista del día</string>
+    <string name="action_three_day_view">Ver 3 días</string>
+    <string name="action_week_view">vista de la semana</string>
+    <string name="title_activity_basic">Kilkai</string>
+    <string name="title_activity_asynchronous">Eventos asíncronos</string>
+    <string name="async_error">No se pudo descargar los eventos a través de Internet</string>
+
+    <string name="not">Notificaciones</string>
+    <string name="ag">Agenda</string>
+    <string name="renew">Nuevo recordatorio</string>
+
+    <string name="title_activity_main_logueo">Kilkai</string>
+    <string name="title_activity_notificacion_show">Kilkai</string>
+    <string name="title_activity_index">Kilkai</string>
+    <string name="title_activity_agendashow">Kilkai</string>
+</resources>
